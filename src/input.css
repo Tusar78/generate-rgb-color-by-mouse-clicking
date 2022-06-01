@@ -11,6 +11,10 @@
     @apply text-blue-900 text-base tracking-wide;
   }
 
+  .card__input {
+    @apply border border-blue-200 rounded-md shadow-md p-2 outline-none block mt-3 disabled:opacity-80;
+  }
+
   .card__btn {
     @apply mt-4 px-6 py-2 bg-blue-600 text-white font-semibold rounded-md shadow-md;
   }
