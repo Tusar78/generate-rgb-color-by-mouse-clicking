@@ -12,10 +12,14 @@
   }
 
   .card__input {
-    @apply border border-blue-200 rounded-md shadow-md p-2 outline-none block mt-3 disabled:opacity-80;
+    @apply border border-blue-200 rounded-md shadow-md p-2 outline-none mt-3 disabled:opacity-80;
   }
 
-  .card__btn {
-    @apply mt-4 px-6 py-2 bg-blue-600 text-white font-semibold rounded-md shadow-md;
+  .card__change-btn {
+    @apply mt-4 px-6 py-2 bg-blue-600 text-white font-semibold rounded-md shadow-md block;
+  }
+
+  .card__copy-btn {
+    @apply text-white rounded-md shadow-md px-4 py-2 border text-black outline-none;
   }
 }
