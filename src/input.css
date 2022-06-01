@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .card {
+    @apply p-8 w-fit rounded-lg bg-white shadow-lg;
+  }
+
+  .card__desc {
+    @apply text-blue-900 text-base tracking-wide;
+  }
+
+  .card__btn {
+    @apply mt-4 px-6 py-2 bg-blue-600 text-white font-semibold rounded-md shadow-md;
+  }
+}
