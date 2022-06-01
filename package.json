@@ -1,0 +1,23 @@
+{
+  "name": "generate-rgb-color-by-mouse-clicking",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/assets/css/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tusar78/generate-rgb-color-by-mouse-clicking.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tusar78/generate-rgb-color-by-mouse-clicking/issues"
+  },
+  "homepage": "https://github.com/Tusar78/generate-rgb-color-by-mouse-clicking#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.24"
+  }
+}
