@@ -27,8 +27,8 @@ const main = () => {
   })
 
   // Change and generate code by refreshing
-  container.style.backgroundColor = randomHEX();
   cardInp.value = randomHEX();
+  container.style.backgroundColor = cardInp.value;
   cardCopyBtn.innerHTML = 'Copy';
   cardCopyBtn.style.color = 'black'
 
