@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Change the background color</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change the background color</title>
 
-  <!-- Connect css -->
-  <link rel="stylesheet" href="./assets/css/output.css">
-
-</head>
-<body>
-  <div class="w-full h-screen flex items-center justify-center" id="container">
-    <div class="card">
-      <p class="card__desc">Background change by flowing button!</p>
-      <input class="card__input" type="text" value="#ffffff" disabled> 
-      <button class="card__copy-btn">Copy</button>
-      <button class="card__change-btn">Change</button>
+    <!-- Connect css -->
+    <link rel="stylesheet" href="./assets/css/output.css" />
+  </head>
+  <body>
+    <div class="card-container" id="container">
+      <!-- <div class="toast-msg">#9ac674 Copied!</div> -->
+      <div class="card">
+        <p class="card__desc">Background change by flowing button!</p>
+        <input class="card__input" type="text" value="#ffffff"/>
+        <button class="card__copy-btn">Copy</button>
+        <button class="card__change-btn">Change</button>
+      </div>
     </div>
-  </div>
-
-  <script src="./assets/js/app.js"></script>
-</body>
+    <script src="./assets/js/app.js"></script>
+  </body>
 </html>

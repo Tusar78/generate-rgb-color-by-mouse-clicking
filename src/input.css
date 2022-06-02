@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer components {
+  .card-container {
+    @apply w-full h-screen flex items-center justify-center;
+  }
   .card {
     @apply p-8 w-fit rounded-lg bg-white shadow-lg;
   }
@@ -22,4 +25,38 @@
   .card__copy-btn {
     @apply text-white rounded-md shadow-md px-4 py-2 border text-black outline-none;
   }
+
+  .toast-msg {
+    @apply w-fit px-4 py-2 rounded-lg shadow-lg bg-white text-black fixed right-4 top-4 font-semibold cursor-pointer active:ring-4 active:ring-offset-2 active:ring-red-400;
+  }
 }
+
+.toast-in {
+  animation: fade-in 0.5s ease-in;
+}
+
+.toast-out {
+  animation: fade-out 0.5s ease-in;
+}
+
+@keyframes fade-in {
+  from {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+} 
