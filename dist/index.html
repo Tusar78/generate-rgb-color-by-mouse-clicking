@@ -14,6 +14,7 @@
       <!-- <div class="toast-msg">#9ac674 Copied!</div> -->
       <div class="card">
         <p class="card__desc">Background change by flowing button!</p>
+        <!-- Card Container For Hex -->
         <div class="card__inp-container">
           <div class="card__inp-icon">
             <img
@@ -22,8 +23,27 @@
               alt="Hash icon"
             />
           </div>
-          <input class="card__input" type="text" value="#ffffff" />
-          <button class="card__copy-btn">Copy</button>
+          <input class="card__input" id="card-input-filled" type="text" value="#ffffff" />
+          <button class="card__copy-btn" id="card-copy-btn">Copy</button>
+        </div>
+
+        <!-- Card Container For RGB -->
+        <div class="card__inp-container">
+          <div class="card__inp-icon">
+            <img
+              class="w-6 h-6"
+              src="./assets/images/light-bulb.png"
+              alt="Hash icon"
+            />
+          </div>
+          <input
+            class="card__input"
+            id="card-input-filled-rgb"
+            type="text"
+            value="rgb(179, 11, 184)"
+            disabled
+          />
+          <button class="card__copy-btn" id="card-copy-btn-rgb">Copy</button>
         </div>
         <button class="card__change-btn">Change</button>
       </div>

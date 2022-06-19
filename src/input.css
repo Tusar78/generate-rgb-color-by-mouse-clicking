@@ -31,7 +31,7 @@
   }
 
   .card__copy-btn {
-    @apply text-white rounded-md shadow-md px-4 py-2 border text-black outline-none;
+    @apply text-white rounded-md shadow-md px-4 py-2 ml-2 border text-black outline-none;
   }
 
   .toast-msg {
