@@ -15,7 +15,7 @@
   }
 
   .card__input {
-    @apply border border-blue-200 rounded-md shadow-md p-2 outline-none mt-3 disabled:opacity-80;
+    @apply border border-l-0 border-blue-200 rounded-tr-md rounded-br-md shadow-md p-2 pl-0 outline-none disabled:opacity-80;
   }
 
   .card__change-btn {
@@ -28,6 +28,14 @@
 
   .toast-msg {
     @apply w-fit px-4 py-2 rounded-lg shadow-lg bg-white text-black fixed right-4 top-4 font-semibold cursor-pointer active:ring-4 active:ring-offset-2 active:ring-red-400;
+  }
+
+  .card__inp-container {
+    @apply flex items-center mt-3;
+  }
+
+  .card__inp-icon {
+    @apply p-2 pr-0 shadow-md rounded-tl-md rounded-bl-md border border-r-0 border-blue-200;
   }
 }
 
@@ -59,4 +67,4 @@
     transform: translateX(200px);
     opacity: 0;
   }
-} 
+}
