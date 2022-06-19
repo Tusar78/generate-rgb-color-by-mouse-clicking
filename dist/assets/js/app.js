@@ -51,9 +51,12 @@ const main = () => {
   });
 
   cardInp.addEventListener("keyup", (e) => {
-    const color = `#${e.target.value}`;
-    if (color && isValidHex(color)) {
-      container.style.backgroundColor = color;
+    const color = e.target.value;
+    if (color) {
+      cardInp.value = color.toLowerCase();
+      if (isValidHex(`#${color}`)) {
+        container.style.backgroundColor = `#${color}`;
+      }
     }
   });
 
