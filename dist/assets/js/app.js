@@ -26,31 +26,32 @@ const main = () => {
   cardChangeBtn.addEventListener("click", (e) => {
     const generatedBG = randomHEX();
     container.style.backgroundColor = generatedBG;
-    cardInp.value = generatedBG;
+    cardInp.value = generatedBG.substring(1);
   });
 
   // Change and generate code by refreshing
-  cardInp.value = randomHEX();
-  container.style.backgroundColor = cardInp.value;
+  const generatedBG = randomHEX();
+  container.style.backgroundColor = generatedBG;
+  cardInp.value = generatedBG.substring(1);
 
   // Copy hex code
   cardCopyBtn.addEventListener("click", (e) => {
-    navigator.clipboard.writeText(cardInp.value);
+    navigator.clipboard.writeText(`#${cardInp.value}`);
 
     if (div !== null) {
       div.remove();
       div = null;
     }
 
-    if (isValidHex(`${cardInp.value}`)) {
-      showToastMsg(`${cardInp.value} Copied!`);
+    if (isValidHex(`#${cardInp.value}`)) {
+      showToastMsg(`#${cardInp.value} Copied!`);
     } else {
       alert('Please enter valid hex code!');
     }
   });
 
   cardInp.addEventListener("keyup", (e) => {
-    const color = e.target.value;
+    const color = `#${e.target.value}`;
     if (color && isValidHex(color)) {
       container.style.backgroundColor = color;
     }
