@@ -3,10 +3,10 @@
 > #### The benefits that you will get in this project are mentioned below.
 
 ### Project Overview:
-Big Screen.
+- Big Screen.
 ![Big-Screen](https://raw.githubusercontent.com/Tusar78/generate-rgb-color-by-mouse-clicking/main/dist/assets/images/big-screen.png)
 
-Small device.
+- Small device.
 ![enter image description here](https://raw.githubusercontent.com/Tusar78/generate-rgb-color-by-mouse-clicking/main/dist/assets/images/small-screen.png)
 ### Features:
 - You can change the background color by refreshing and automatically generating "Hex" and "RGB" colors.
