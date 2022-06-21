@@ -19,20 +19,29 @@ const main = () => {
   // Collect all references
   const container = document.getElementById("container");
   const cardChangeBtn = document.querySelector(".card__change-btn");
-  const cardCopyBtn = document.querySelector(".card__copy-btn");
-  const cardInp = document.querySelector(".card__input");
+  const cardCopyBtn = document.querySelector("#card-copy-btn");
+  const cardCopyBtnRGB = document.querySelector("#card-copy-btn-rgb");
+  const cardInp = document.querySelector("#card-input-filled");
+  const cardInpRGB = document.querySelector("#card-input-filled-rgb");
 
   // Click event handler into cardChangeBtn
   cardChangeBtn.addEventListener("click", (e) => {
-    const generatedBG = randomHEX();
-    container.style.backgroundColor = generatedBG;
-    cardInp.value = generatedBG.substring(1);
+    const color = generateColorDecimal();
+    const hex = randomHEX(color);
+    const rgb = generateRGB(color);
+    container.style.backgroundColor = hex;
+    cardInp.value = hex.substring(1);
+    cardInpRGB.value = rgb;
   });
 
   // Change and generate code by refreshing
-  const generatedBG = randomHEX();
-  container.style.backgroundColor = generatedBG;
-  cardInp.value = generatedBG.substring(1);
+  const color = generateColorDecimal();
+  const hex = randomHEX(color);
+  const rgb = generateRGB(color);
+  container.style.backgroundColor = hex;
+  cardInp.value = hex.substring(1);
+  cardInpRGB.value = rgb;
+  
 
   // Copy hex code
   cardCopyBtn.addEventListener("click", (e) => {
@@ -117,8 +126,8 @@ const generateColorDecimal = () => {
   }
 }
 
-const randomHEX = () => {
-  const {red, green, blue} = generateColorDecimal();
+const randomHEX = ({red, green, blue}) => {
+  // const {red, green, blue} = generateColorDecimal();
   // const towCodeRed = red <= 9 ? `0${red}` : red.toString(16);
   // const towCodeGreen= green <= 9 ? `0${green}` : green.toString(16);
   // const towCodeBlue = blue <= 9 ? `0${blue}` : blue.toString(16);
@@ -130,6 +139,12 @@ const randomHEX = () => {
 
   return `#${getTwoCode(red)}${getTwoCode(green)}${getTwoCode(blue)}`;
 };
+
+const generateRGB = ({red, green, blue}) => {
+  // const {red, green, blue} = generateColorDecimal();
+
+  return `rgb(${red}, ${green}, ${blue})`;
+}
 
 // Generate Random color
 /*
