@@ -59,13 +59,31 @@ const main = () => {
     }
   });
 
+  // Copy RGB code
+  cardCopyBtnRGB.addEventListener("click", (e) => {
+    navigator.clipboard.writeText(`${cardInpRGB.value}`);
+
+    if (div !== null) {
+      div.remove();
+      div = null;
+    }
+
+    if (isValidHex(`#${cardInp.value}`)) {
+      showToastMsg(`${cardInpRGB.value} Copied!`);
+    } else {
+      alert('Please enter valid hex code!');
+    }
+  });
+
   cardInp.addEventListener("keyup", (e) => {
     const color = e.target.value;
     if (color) {
       cardInp.value = color.toLowerCase();
       if (isValidHex(`#${color}`)) {
         container.style.backgroundColor = `#${color}`;
+        cardInpRGB.value = hexToRGB(color);
       }
+      
     }
   });
 
@@ -142,6 +160,18 @@ const randomHEX = ({red, green, blue}) => {
 
 const generateRGB = ({red, green, blue}) => {
   // const {red, green, blue} = generateColorDecimal();
+
+  return `rgb(${red}, ${green}, ${blue})`;
+}
+
+/**
+ * convert Hex to RGB
+ * @param {string} hex;
+ */
+const hexToRGB = hex => {
+  const red = parseInt(hex.slice(0, 2), 16);
+  const green = parseInt(hex.slice(2, 4), 16);
+  const blue = parseInt(hex.slice(4), 16);
 
   return `rgb(${red}, ${green}, ${blue})`;
 }
