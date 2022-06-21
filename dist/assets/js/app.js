@@ -145,11 +145,6 @@ const generateColorDecimal = () => {
 }
 
 const randomHEX = ({red, green, blue}) => {
-  // const {red, green, blue} = generateColorDecimal();
-  // const towCodeRed = red <= 9 ? `0${red}` : red.toString(16);
-  // const towCodeGreen= green <= 9 ? `0${green}` : green.toString(16);
-  // const towCodeBlue = blue <= 9 ? `0${blue}` : blue.toString(16);
-
   const getTwoCode = value => {
     const hex = value.toString(16);
     return hex.length === 1 ? `0${hex}` : hex;
@@ -159,8 +154,6 @@ const randomHEX = ({red, green, blue}) => {
 };
 
 const generateRGB = ({red, green, blue}) => {
-  // const {red, green, blue} = generateColorDecimal();
-
   return `rgb(${red}, ${green}, ${blue})`;
 }
 
@@ -175,14 +168,3 @@ const hexToRGB = hex => {
 
   return `rgb(${red}, ${green}, ${blue})`;
 }
-
-// Generate Random color
-/*
-const randomRGB = () => {
-  const red = Math.floor(Math.random() * 256);
-  const green = Math.floor(Math.random() * 256);
-  const blue = Math.floor(Math.random() * 256);
-
-  return `rgb(${red}, ${green}, ${blue})`;
-}
-*/
